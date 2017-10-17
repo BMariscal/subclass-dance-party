@@ -7,22 +7,14 @@ var makeDancer = function(top, left, timeBetweenSteps) {
     // it just schedules the next step
   this.$node = $('<span class="dancer"></span>');
   this.timeBetweenSteps = timeBetweenSteps;
-    // Use css top and left properties to position our <span> tag
-    // where it belongs on the page. See http://api.jquery.com/css/
-    //
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
   this.top = top;
   this.left = left;
   this.step();
   this.setPosition(this.top, this.left);
 };
 
-makeDancer.prototype.step = function(time) {
-  console.log( "hello");
-  time = time || this.timeBetweenSteps;
-  console.log(time);
-  setTimeout(this.step.bind(this), time);
+makeDancer.prototype.step = function() {
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
 makeDancer.prototype.setPosition = function() {

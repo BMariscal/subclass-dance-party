@@ -25,8 +25,9 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 800
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 
@@ -56,8 +57,9 @@ $(document).ready(function() {
     var dancer = new MakeCarltonDancer(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 800
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 //SHIA DANCER
@@ -86,14 +88,28 @@ $(document).ready(function() {
     var dancer = new MakeShiaDancer(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 800
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 
+  console.log(window.dancers);
 
-
-
+  $('.lineup').on('click', function(event) {
+    
+    var dancers = window.dancers;
+    dancers.forEach(function(dancer) {
+      var $node = $(dancer.$node[0]);
+      console.log($node);
+      var styleSettings = {
+        'display': 'flex',
+        'align-items': 'center'
+      };
+      $node.css(styleSettings);
+//{'display': 'flex', 'align-items': 'center'}
+    });
+  });
 
 });
 

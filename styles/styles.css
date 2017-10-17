@@ -4,7 +4,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url("burn.gif");
+  background-image: url("https://maroslaw.github.io/rainyday.js/img/df4.jpg");
   background-color:#444;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,10 +18,16 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+span{
+  display: flex; /* or inline-flex */
+
+}
+
 
 .topbar{
   height:32px;
   background-color: #555;
+z-index: 3;
 }
 .title{
   background-color: #777;
@@ -34,6 +40,8 @@ body, a:link, a:visited, a:active{
 .the-carlton{
   border-radius:10px;
   position:absolute;
+  height:50%;
+  width:50%;
 }
 
 .the-putin{

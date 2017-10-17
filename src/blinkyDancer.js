@@ -21,6 +21,16 @@ MakeBlinkyDancer.prototype.step = function() {
   this.$node.toggle();
 };
 
+var counter = 0;
+MakeBlinkyDancer.prototype.lineUp = function() {
+  counter +=100;
+  this.top = 0;
+  this.left = counter;
+  this.float = "left";
+  this.display = "inline-block";
+};
+
+
 // MakeBlinkyDancer.prototype.setPosition = function() {
 //   makeDancer.prototype.setPosition.call(this, this.left, this.top);
 // };

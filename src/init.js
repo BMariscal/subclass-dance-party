@@ -29,6 +29,7 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     $("body").append(dancer.$node);
+    if (window.dancers.length % 2 === 0){partnerUp();}
   });
 
 // CARLTON DANCER
@@ -61,6 +62,7 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     $("body").append(dancer.$node);
+    if (window.dancers.length % 2 === 0){partnerUp();}
   });
 //SHIA DANCER
 
@@ -92,6 +94,7 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     $("body").append(dancer.$node);
+   if (window.dancers.length % 2 === 0) { partnerUp();}
   });
 
   console.log(window.dancers);
@@ -110,6 +113,25 @@ $(document).ready(function() {
 
     });
   });
+  var partnerUp = function() {
+    var dancers = window.dancers;
+    for (var i = 0; i < dancers.length; i++) {
+      if (i % 2 !== 0) {
+        dancers[i].top = dancers[i - 1].top;
+        dancers[i].left = dancers[i - 1].left + 100;
+      }
+    }
+
+  };
+
+  // var findPartner = function(x1, y1, x2, y2) {
+  //   console.log("partnerUp");
+  //   var horizontalDiff = x1 - x2;
+  //   var verticalDiff = y1 - y2;
+
+  //   var distance = Math.sqrt(Math.abs(horizontalDiff * horizontalDiff) + Math.abs(verticalDiff * verticalDiff));
+  //   return distance;
+  // };
 
 });
 

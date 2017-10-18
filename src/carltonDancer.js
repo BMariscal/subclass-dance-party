@@ -4,7 +4,7 @@ var MakeCarltonDancer = function(top, left, timeBetweenSteps) {
   this.counter  = 0;
   makeDancer.call(this, this.top, this.left, timeBetweenSteps);
   this.timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<span class="the-carlton"><img src="http://bestanimations.com/Animals/Insects/Butterflys/butterfly-animated-gif-45.gif" alt="Carlton"></span>');
+  this.$node = $('<span class="the-carlton"><img src="styles/scarlton.gif" alt="Carlton"></span>');
 };
 
 MakeCarltonDancer.prototype = Object.create(makeDancer.prototype);
@@ -12,7 +12,7 @@ MakeCarltonDancer.prototype.constructor = MakeCarltonDancer;
 var counter = 0;
 MakeCarltonDancer.prototype.lineUp = function() {
   counter +=100;
-  this.top = 0;
+  this.top = 50;
   this.left = counter;
   this.float = "left";
   this.display = "inline-block";

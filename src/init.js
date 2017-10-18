@@ -118,7 +118,7 @@ $(document).ready(function() {
     for (var i = 0; i < dancers.length; i++) {
       if (i % 2 !== 0) {
         dancers[i].top = dancers[i - 1].top;
-        dancers[i].left = dancers[i - 1].left + 100;
+        dancers[i].left = dancers[i - 1].left + 50;
       }
     }
 

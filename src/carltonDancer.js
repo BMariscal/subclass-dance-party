@@ -4,7 +4,7 @@ var MakeCarltonDancer = function(top, left, timeBetweenSteps) {
   this.counter  = 0;
   makeDancer.call(this, this.top, this.left, timeBetweenSteps);
   this.timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<span class="the-carlton"><img src="styles/scarlton.gif" alt="Carlton"></span>');
+  this.$node = $('<span class="the-carlton"><img src="styles/putin2.gif" alt="Carlton"></span>');
 };
 
 MakeCarltonDancer.prototype = Object.create(makeDancer.prototype);

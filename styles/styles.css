@@ -4,7 +4,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url("https://maroslaw.github.io/rainyday.js/img/df4.jpg");
+  background-image: url("burn.gif");
   background-color:#444;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,10 +18,7 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
-span{
-  display: flex; /* or inline-flex */
 
-}
 
 
 .topbar{
